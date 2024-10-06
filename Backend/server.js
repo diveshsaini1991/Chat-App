@@ -15,7 +15,7 @@ const port = process.env.PORT || 4001;
 app.use(cookieParser());
 app.use(express.json());
 
-
+app.get("/ping",(req,res)=>res.end("PONG"))
 app.use("/api/auth",authRouter);
 app.use("/api/message",messageRouter);
 app.use("/api/user",userRouter);
